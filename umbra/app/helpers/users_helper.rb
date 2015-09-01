@@ -1,5 +1,5 @@
 module UsersHelper
 	def current_user
-		@user = User.where(params[:phone]).first
+		@user = User.find(params[:id])
 	end
 end

@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 		@user.subscribed = true
-		if @user.save && @user.type == nil
+		if @user.save && @user.preference == nil
 			current_user
 			render 'users/show'
 		else
@@ -18,17 +18,17 @@ class UsersController < ApplicationController
 
 	def edit
 		current_user
-		if @user.type == nil
+		if @user.preference == nil
 			render 'users/show'
-		elsif @user.type != nil
+		elsif @user.preference != nil
 		current_user
 	end
 	end
 	def show
 		current_user
-		if @user.type != nil
+		if @user.preference != nil
 			render 'users/edit'
-		else @user.type == nil
+		else @user.preference == nil
 			current_user
 		end
 	end
