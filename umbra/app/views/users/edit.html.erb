@@ -2,8 +2,11 @@ Edits
 
 unsubscribe | change your subscribtion choice
 
-<%=@user.id%>
-<%=@user.phone%>
-<%=@user.preference%>
-<%=@user.subscribed%>
-<%=params%>
+<ul>
+<li>User_id:<%=@user.id%></li>
+<li>User Phone:<%=@user.phone%></li>
+<li>User Preference:<%=@user.preference%></li>
+<li>User Subscribed: <%=@user.subscribed%></li>
+<li>User Params: <%=params%></li>
+<li>User: <%=@user%></li>
+</ul>

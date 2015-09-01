@@ -5,13 +5,19 @@ class UsersController < ApplicationController
 	
 
 	def create
+		p "*"*80
+		p user_params
 		@user = User.new(user_params)
 		@user.subscribed = true
-		if @user.save && @user.preference == nil
-			current_user
+		if @user.save 
+			p @user
+			p current_user
 			render 'users/show'
-		else
+		elsif @user.preference == nil
 			 current_user
+			 render 'users/show'
+		else
+			current_user
 			render 'users/edit'
 		end
 	end
