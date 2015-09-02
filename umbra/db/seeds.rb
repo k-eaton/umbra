@@ -14,7 +14,6 @@ NegQuote.create(quote: "People say you have to work on your resentments. Yeah, n
 NegQuote.create(quote: "I have a 10,000-year-old brain and the boogers of a 7-year-old. That's how I describe myself.", author: "Charlie Sheen")
 
 User.create(phone: "+19256396135", preference: "pos", subscribed: true)
-User.create(phone: "+19256396136", preference: "pos", subscribed: true)
 User.create(phone: "+19256396135", preference: "neg", subscribed: true)
 
 QCount.create(q_count: 1)
